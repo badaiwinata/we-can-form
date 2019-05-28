@@ -4,7 +4,9 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <h3>JUDUL</h3>
+        <h1>Hey Stranger!</h1>
+        <h4>I'm dying to get to know you better!</h4>
+        <button>Talk to me</button>
       </div>
     )
   }
