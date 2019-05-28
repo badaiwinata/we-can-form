@@ -1,12 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {
+  MDBContainer, MDBRow, MDBCol,
+  MDBJumbotron, MDBInput
+} from "mdbreact";
 
 export default class Lastname extends Component {
   render() {
     return (
-      <div>
-        <h3>2. And your last name?</h3>
-        <input></input>
-      </div>
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol>
+            <MDBJumbotron>
+              <h3>2. And your <u>last name</u> ?</h3>
+              <MDBInput size="lg" />
+            </MDBJumbotron>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
     )
   }
 }
