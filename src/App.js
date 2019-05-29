@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './components/Header';
-import Firstname from './components/Firstname';
 import Lastname from './components/Lastname';
 import Gender from './components/Gender';
 import Address from './components/Address';
@@ -12,7 +11,6 @@ function App() {
   return (
     <div>
       <Header/>
-      <Firstname/>
       <Lastname/>
       <Gender/>
       <Address/>

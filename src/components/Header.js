@@ -1,27 +1,60 @@
 import React, { Component } from 'react';
 import {
-  MDBContainer, MDBRow, MDBCol,
-  MDBJumbotron, MDBBtn
+  MDBContainer, MDBRow, MDBCol, MDBIcon, MDBAnimation,
+  MDBJumbotron, MDBCardTitle, MDBBtn, MDBInput
 } from "mdbreact";
-import './styles/styles.css'
+import scrollToComponent from 'react-scroll-to-component';
+import './styles/styles.css';
+import gradient1 from './styles/gradient1.jpg';
 
 
 export default class Header extends Component {
+
+  componentWillMount() {
+    scrollToComponent(this.firstName);
+  }
+
   render() {
     return (
-      <MDBContainer className="header">
-        <MDBRow>
-          <MDBCol>
-            <MDBJumbotron>
-              <h1>
-                <strong>Hey Stranger!</strong>
-              </h1>
-              <h4>I'm dying to get to know you better!</h4>
-              <MDBBtn>Talk to me</MDBBtn>
-            </MDBJumbotron>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
+      <div>
+        <MDBContainer className="header">
+          <MDBRow>
+            <MDBCol>
+              <MDBJumbotron style={{ padding: 0 }}>
+                <MDBCol className="text-white text-center py-5 px-4 my-5" style={{ backgroundImage: `url(./styles/gradient1.jpg)` }}>
+                  <MDBCol className="py-5">
+                    <MDBCardTitle className="h1-responsive pt-3 m-5 font-bold">
+                      Hey Stranger!
+                  </MDBCardTitle>
+                    <h5 className="mx-5 mb-5">
+                      I'm dying to get to know you better!
+                  </h5>
+                    <MDBBtn
+                      outline color="white"
+                      className="mb-5"
+                      onClick={() => scrollToComponent(this.firstName)}
+                    >
+                      <MDBIcon icon="comment-alt" className="mr-2" /> Talk to me
+                  </MDBBtn>
+                  </MDBCol>
+                </MDBCol>
+              </MDBJumbotron>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+        <MDBContainer className='firstName' ref={(section) => { this.firstName = section; }}>
+          <MDBRow>
+            <MDBCol>
+              <MDBAnimation reveal type="fadeInLeft">
+                <MDBJumbotron>
+                  <h3>1. Hola, Whats your <u>first name</u> ?</h3>
+                  <MDBInput size="lg" />
+                </MDBJumbotron>
+              </MDBAnimation>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </div>
     )
   }
 }

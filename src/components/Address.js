@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   MDBContainer, MDBRow, MDBCol,
-  MDBJumbotron, MDBInput
+  MDBJumbotron, MDBInput, MDBAnimation
 } from "mdbreact";
 
 export default class Address extends Component {
@@ -10,13 +10,15 @@ export default class Address extends Component {
       <MDBContainer>
         <MDBRow>
           <MDBCol>
-            <MDBJumbotron>
-              <h3>4. Where do you <u>live</u>, 'fungsi manggil nama' ?</h3>
-              <MDBInput size="lg" />
-            </MDBJumbotron>
+            <MDBAnimation reveal type="fadeInLeft">
+              <MDBJumbotron>
+                <h3>4. Where do you <u>live</u>, 'fungsi manggil nama' ?</h3>
+                <MDBInput size="lg" />
+              </MDBJumbotron>
+            </MDBAnimation>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-    )
-  }
-}
+        )
+      }
+    }

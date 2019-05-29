@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   MDBContainer, MDBRow, MDBCol,
-  MDBJumbotron, MDBInput
+  MDBJumbotron, MDBInput, MDBAnimation
 } from "mdbreact";
 
 export default class Hobby extends Component {
@@ -10,10 +10,12 @@ export default class Hobby extends Component {
       <MDBContainer>
         <MDBRow>
           <MDBCol>
-            <MDBJumbotron>
-              <h3>6. What’s your <u>hobby</u> ?</h3>
-              <MDBInput size="lg" />
-            </MDBJumbotron>
+            <MDBAnimation reveal type="fadeInLeft">
+              <MDBJumbotron>
+                <h3>6. What’s your <u>hobby</u> ?</h3>
+                <MDBInput size="lg" />
+              </MDBJumbotron>
+            </MDBAnimation>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
