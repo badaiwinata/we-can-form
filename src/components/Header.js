@@ -68,6 +68,7 @@ export default class Header extends Component {
                     type="button"
                     disabled={!this.validateForm()}
                     onClick={this.handleSubmit}
+                    color="info"
                   >
                     Next
                   </MDBBtn>

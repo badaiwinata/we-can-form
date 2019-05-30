@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  MDBContainer, MDBRow, MDBCol,
+  MDBContainer, MDBRow, MDBCol, MDBBtn,
   MDBJumbotron, MDBInput, MDBAnimation
 } from "mdbreact";
 
@@ -19,6 +19,12 @@ export default class Birthday extends Component {
               <MDBJumbotron>
                 <h3>5. When is your <u>birthday</u> ?</h3>
                 <MDBInput size="lg" type="date"/>
+                <MDBBtn
+                    type="button"
+                    color="info"
+                  >
+                    Next
+                  </MDBBtn>
               </MDBJumbotron>
             </MDBAnimation>
           </MDBCol>

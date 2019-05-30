@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   MDBContainer, MDBRow, MDBCol,
   MDBJumbotron, MDBInput, MDBAnimation,
-  MDBFormInline
+  MDBFormInline, MDBBtn
 } from "mdbreact";
 
 export default class Gender extends Component {
@@ -31,6 +31,12 @@ export default class Gender extends Component {
                   <MDBInput onClick={this.onClick(2)} checked={this.state.radio === 2 ? true : false} label="Female"
                     type="radio" id="radio2" />
                 </MDBFormInline>
+                <MDBBtn
+                  type="button"
+                  color="info"
+                >
+                  Next
+                </MDBBtn>
               </MDBJumbotron>
             </MDBAnimation>
           </MDBCol>
