@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   MDBContainer, MDBRow, MDBCol, MDBBtn,
   MDBJumbotron, MDBInput, MDBAnimation,
-  MDBProgress
+  MDBProgress, MDBIcon
 } from "mdbreact";
 import Modal from './Modal';
 
@@ -29,10 +29,10 @@ export default class Interest extends Component {
                 <MDBInput size="lg" />
                 <MDBBtn
                   type="button"
-                  color="info"
+                  color="indigo"
                   onClick={this.showModal}
                 >
-                  Submit
+                  <MDBIcon far icon="paper-plane" />  Submit
                 </MDBBtn>
               </MDBJumbotron>
             </MDBAnimation>

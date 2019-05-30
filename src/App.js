@@ -9,7 +9,7 @@ import Interest from './components/Interest';
 
 function App() {
   return (
-    <div>
+    <div style={{ backgroundColor: '#E4E5E6' }}>
       <Header/>
       <Lastname/>
       <Gender/>
