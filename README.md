@@ -11,8 +11,6 @@ $ yarn install/ npm install
 $ yarn start/ npm start
 ```
 
-## User Guide
-
 ## Built With 
 This project uses several libraries & services:
 
