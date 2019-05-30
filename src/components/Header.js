@@ -5,10 +5,24 @@ import {
 } from "mdbreact";
 import scrollToComponent from 'react-scroll-to-component';
 import './styles/styles.css';
-import gradient1 from './styles/gradient1.jpg';
+// import gradient1 from './styles/gradient1.jpg';
 
 
 export default class Header extends Component {
+
+  state = {
+    firstName: ''
+  };
+
+  validateForm() {
+    return this.state.firstName.length > 0
+  }
+
+  handleAddState = (e) => {
+    this.setState({
+      firstName: e.target.value
+    })
+  }
 
   componentWillMount() {
     scrollToComponent(this.firstName);
@@ -21,7 +35,8 @@ export default class Header extends Component {
           <MDBRow>
             <MDBCol>
               <MDBJumbotron style={{ padding: 0 }}>
-                <MDBCol className="text-white text-center py-5 px-4 my-5" style={{ backgroundImage: `url(./styles/gradient1.jpg)` }}>
+              {/* https://mdbootstrap.com/img/Photos/Others/gradient1.jpg */}
+                <MDBCol className="text-white text-center py-5 px-4 my-5" style={{ backgroundImage: `url()` }}>
                   <MDBCol className="py-5">
                     <MDBCardTitle className="h1-responsive pt-3 m-5 font-bold">
                       Hey Stranger!
@@ -48,7 +63,14 @@ export default class Header extends Component {
               <MDBAnimation reveal type="fadeInLeft">
                 <MDBJumbotron>
                   <h3>1. Hola, Whats your <u>first name</u> ?</h3>
-                  <MDBInput size="lg" />
+                  <MDBInput size="lg" value={this.state.firstName} onChange={this.handleAddState} />
+                  <MDBBtn
+                    type="button"
+                    disabled={!this.validateForm()}
+                    onClick={this.handleSubmit}
+                  >
+                    Next
+                  </MDBBtn>
                 </MDBJumbotron>
               </MDBAnimation>
             </MDBCol>

@@ -5,6 +5,11 @@ import {
 } from "mdbreact";
 
 export default class Birthday extends Component {
+
+  getPickerValue = (value) => {
+    console.log(value);
+  }
+
   render() {
     return (
       <MDBContainer>
@@ -13,7 +18,7 @@ export default class Birthday extends Component {
             <MDBAnimation reveal type="fadeInLeft">
               <MDBJumbotron>
                 <h3>5. When is your <u>birthday</u> ?</h3>
-                <MDBInput size="lg" />
+                <MDBInput size="lg" type="date"/>
               </MDBJumbotron>
             </MDBAnimation>
           </MDBCol>
