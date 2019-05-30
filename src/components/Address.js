@@ -12,7 +12,7 @@ export default class Address extends Component {
           <MDBCol>
             <MDBAnimation reveal type="fadeInLeft">
               <MDBJumbotron>
-                <h3>4. Where do you <u>live</u>, 'fungsi manggil nama' ?</h3>
+                <h3>4. Where do you <u>live</u> ?</h3>
                 <MDBInput size="lg" />
                 <MDBBtn
                     type="button"

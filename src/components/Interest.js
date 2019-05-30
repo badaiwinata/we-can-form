@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   MDBContainer, MDBRow, MDBCol, MDBBtn,
-  MDBJumbotron, MDBInput, MDBAnimation
+  MDBJumbotron, MDBInput, MDBAnimation,
+  MDBProgress
 } from "mdbreact";
 import Modal from './Modal';
 
@@ -38,6 +39,7 @@ export default class Interest extends Component {
           </MDBCol>
         </MDBRow>
         <Modal modal={this.state.modal} toggle={this.showModal}/>
+        <MDBProgress material preloader />
       </MDBContainer>
     )
   }

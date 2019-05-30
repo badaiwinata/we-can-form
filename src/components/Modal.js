@@ -10,8 +10,8 @@ export default class Modal extends Component {
 	render() {
 		console.log(this.state)
 		return (
-			<MDBContainer>
-				<MDBModal isOpen={this.props.modal} >
+			<MDBContainer >
+				<MDBModal isOpen={this.props.modal} toggle={this.props.toggle} >
 					<MDBModalHeader toggle={this.props.toggle}>
 						"Hi , nice to meet you." <MDBIcon far icon="grin-beam" />
 					</MDBModalHeader>

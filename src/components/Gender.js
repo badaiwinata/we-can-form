@@ -24,7 +24,7 @@ export default class Gender extends Component {
           <MDBCol>
             <MDBAnimation reveal type="fadeInLeft">
               <MDBJumbotron>
-                <h3>3. Hi 'fungsi manggil nama' Whats your <u>gender</u> ?</h3>
+                <h3>3. Whats your <u>gender</u> ?</h3>
                 <MDBFormInline>
                   <MDBInput onClick={this.onClick(1)} checked={this.state.radio === 1 ? true : false} label="Male"
                     type="radio" id="radio1" />
